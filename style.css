@@ -1,0 +1,286 @@
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: rgb(112, 112, 112);
+    color: black;
+}
+nav{
+    width: 100%;
+    height: 50px;
+    filter: drop-shadow(1px 3px 1px silver);
+    background-color: rgb(255, 255, 255);
+}
+ul{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    filter: drop-shadow(1px 3px 1px silver);
+}
+ul li{
+    display: inline-block;
+    padding: 10px;
+    font-size: 25px;
+    padding-left: 40px;
+    text-align: right;
+}
+li a{
+    color:black;
+    text-decoration: none;
+}
+li a:hover{
+    color:rgba(255, 0, 0, 0.692);
+}
+.icon div{
+    height: 8px;
+    width: 10px;
+    background-color: white;
+    margin-top: 6px;
+}
+li:last-child{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 3px;
+
+}
+.fas{
+    color:white
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;  
+}
+.gallery .item{
+    width: 45%;
+    background-color: rgba(255, 255, 255, 0.253);
+    text-align: center;
+    margin-top: 20px;
+    color: rgba(0, 0, 0, 0.801);
+}
+#galeria{
+    color:rgba(151, 22, 22, 0.747);
+    font-size: 3em;
+    font-family: 'Ranchers', cursive;
+    text-align: center;
+}
+.item img{
+    width: 250px;
+    border-radius: 50%;
+}
+.item{
+    color:white;
+    font-family: 'Roboto', sans-serif;
+}
+.item h1{
+    margin-bottom: 30px;
+    padding: 15px;
+}
+.item p{
+    text-align: justify;
+    padding: 15px;
+}
+hr{
+    width: 80%;
+    margin: 0 auto;
+}
+#animacje{
+    color:black;
+    font-size: 3em;
+    font-family: 'Ranchers', cursive;
+    text-align: center;
+}
+.topic{
+    margin-top: 50px;
+}
+.animations{
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+    justify-content: space-between;
+}
+.animations .animation{
+    width: 40%;
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.253);
+}
+.animation h1{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color:black;
+    padding: 20px;
+}
+.kwadrat{
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.shaker{
+    width: 60px;
+    height: 60px;
+    background-color: rgba(52, 194, 39, 0.692);
+    margin: 0 auto;
+}
+.shaker:hover{
+    animation: shake 1s cubic-bezier(.36,.07,.19,.97);
+}
+
+@media only screen and (max-width: 728px) {
+    ul li:last-child{
+        display: block;
+    }
+    ul li{
+        display: none;
+    }
+    .responsive{
+        background-color: rgb(34, 178, 178);
+    }
+    .responsive li{
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .gallery .item{
+        width: 100%;
+    }
+    .animations .animation{
+        width: 100%;
+    }
+  }
+  @keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+@keyframes shake {
+    10%, 90% {
+      transform: translateX(-1px);
+    }
+    
+    20%, 80% {
+      transform: translateX(2px);
+    }
+  
+    30%, 50%, 70% {
+      transform: translateX(-4px);
+    }
+  
+    40%, 60% {
+      transform: translateX(4px);
+    }
+  }
+  .tasker ul, .tasker li,
+  .tasker .error,
+  .tasker button,
+  .tasker input {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+  .todo-header button, .todo-lists .task button {
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+  }
+  .tasker {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .tasker .error {
+    display: none;
+    background: #ff4747;
+    color: rgb(0, 0, 0);
+    padding: 14px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .tasker ul {
+    background: #fff;
+  }
+  .tasker li,
+  .tasker .error,
+  .tasker button,
+  .tasker input {
+    font: 18px/1.25em 'Lato', sans-serif;
+  }
+  .todo-header {
+    display: inline-flex;
+    background: #212121;
+    justify-content: space-between;
+    width: 100%;
+  }
+  #input-task {
+    color: rgba(255, 255, 255, 0.651);
+  }
+  .todo-header input,
+  .todo-header button {
+    color: #fff;
+    box-sizing: border-box;
+    font-size: 1.25em;
+    padding: 14px;
+  }
+  .todo-header input {
+    flex-grow: 2;
+  }
+  .todo-header button {
+    background: #00b934;
+    border-left: 1px solid #098009;
+  }
+  .todo-header button:hover {
+    background: #5cb85c;
+  }
+  .todo-lists .task {
+    display: block;
+    position: relative;
+    padding: 14px 40px 14px 14px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .todo-lists .task:last-child {
+    border-bottom: none;
+  }
+  .todo-lists .task:hover > button {
+    opacity: 1;
+  }
+  .todo-lists .task.completed {
+    color: #cdcdcd;
+    text-decoration: line-through;
+  }
+  .todo-lists .task input {
+    margin-right: 10px;
+  }
+  .todo-lists .task button {
+    color: #cdcdcd;
+    margin: 14px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+  }
+  .todo-lists .task button:hover {
+    color: #ed1c24;
+  }
